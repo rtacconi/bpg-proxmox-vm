@@ -1,5 +1,5 @@
 module "nodes" {
-  source           = "../modules/proxmox_vm"
+  source           = ".."
   for_each         = { for idx, node in var.cluster.nodes : idx => node }
   environment      = "dev"
   cores            = 2
